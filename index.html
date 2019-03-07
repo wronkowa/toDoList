@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+                  }
+        body {
+            font-family: sans-serif;
+        }
+        header{
+            width: 100%;
+            height: 30vh;
+            background-color: cadetblue;
+            color: white;
+            line-height: 30vh;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 28px;
+            text-shadow: 0 0 2px black;
+            box-shadow: 0 0 10px 1px rgb(128, 126, 126);
+        }
+        .container {
+            width: 80%;
+            /* max-width: 1200px; */
+            background-color: rgb(165, 164, 162);
+            margin: 20px auto 0;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            align-items: center;
+            box-shadow: 0 0 20px 0 rgb(122, 122, 122);
+            border-radius: 30px;
+        }
+        .addBox{
+            width: 70%;
+            /* text-align: center; */
+            margin-bottom: 20px;
+            display: flex;
+            /* justify-content: center; */
+           
+        }
+        .addBox>input{
+            flex-grow: 1;
+            padding: 7px 5px;
+            height: 7vh;
+            width: 60%;
+            /* border: 1px solid black; */
+        }
+        .addBox>button {
+            flex-grow: 1;
+            /* padding: 7px 15px; */
+            height: 7vh;
+            margin-left: 20px;
+            text-transform: uppercase;
+            background-color: cadetblue;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: .3s;
+            border: 2px solid black;
+        }
+        .addBox>button:hover {
+            background-color: rgb(226, 170, 79);
+            color: black;
+        }
+        .container>p {
+            padding: 20px 0;
+        }
+        ul {
+            list-style: none;
+            width: 70%;
+        }
+        li {
+            /* padding:10px 5px; */
+            background-color: white;
+            width: 100%;
+            height: 7vh;
+            line-height: 7vh;
+            display: flex;
+            justify-content: space-between;
+           margin-bottom: 5px;
+           position: relative;
+        }
+        li>span.checked,
+        li>span.delate {
+            display: block;
+            width: 7vh;
+            /* background-color: aquamarine; */
+            height: 100%;
+            border: 2px solid black;
+            text-align: center;
+            cursor: pointer;
+            transition: .3s;
+
+        }
+        li>span.checked i,
+        li>span.delate i
+         {
+            font-size: 4vh;
+            line-height: 6vh;
+            opacity: .3;
+            transition: .3s;
+        }
+        li>span.delate i {
+            opacity: 1;
+        }
+        li>span.delate:hover {
+            border: 2px solid red;
+            background-color: rgb(189, 186, 186);
+        }
+        li>span.delate:hover i {
+            color: red;
+        }
+        li>span.checked:hover {
+            border: 2px solid green;
+        }
+        li>span.checked:hover i {
+            color: green;
+            opacity: .7;
+        }
+        li>span.delate {
+          
+            background-color: rgb(235, 130, 130);
+            /* margin: 2px; */
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>ToDo List</h1>
+    </header>
+    <div class="container">
+        <div class="addBox">
+            <input type="text" placeholder="Write your task to do...">
+            <button>add task</button>
+        </div>
+        <p>Liczba zadań na dziś do wykonania: <span>0</span></p>
+        <ul>
+            <!-- <li><span class="checked"><i class="fas fa-check"></i></span><span class="delate">usuń</span></li> -->
+        </ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
