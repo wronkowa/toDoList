@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 30vh;
+    background-color: cadetblue;
+    color: white;
+    line-height: 30vh;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 28px;
+    text-shadow: 0 0 2px black;
+    box-shadow: 0 0 10px 1px rgb(128, 126, 126);
+}
+
+.container {
+    width: 80%;
+    /* max-width: 1200px; */
+    background-color: rgb(185, 184, 182);
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 0 20px 0 rgb(85, 84, 84);
+    border-radius: 20px;
+}
+
+.addBox {
+    width: 70%;
+    /* text-align: center; */
+    margin-bottom: 20px;
+    display: flex;
+    /* justify-content: center; */
+
+}
+
+.addBox>input {
+    flex-grow: 1;
+    padding: 7px 5px;
+    height: 7vh;
+    width: 60%;
+    /* border: 1px solid black; */
+}
+
+.addBox>input:focus {
+    outline: none;
+    border: 1px solid rgb(133, 130, 130);
+}
+
+.addBox>button {
+    flex-grow: 1;
+    padding: 7px 15px;
+    height: 7vh;
+    margin-left: 20px;
+    text-transform: uppercase;
+    background-color: cadetblue;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    border: 2px solid rgb(32, 32, 32);
+}
+
+.addBox>button:focus {
+    outline: none;
+    border: 2px solid rgb(133, 130, 130);
+    box-shadow: 0 0 5px 0 rgb(133, 130, 130);
+}
+
+.addBox>button:hover {
+    background-color: rgb(226, 170, 79);
+    color: black;
+}
+
+.container>p {
+    padding: 20px 0;
+}
+
+ul {
+    list-style: none;
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+li {
+    /* padding:10px 5px; */
+    background-color: white;
+    width: 100%;
+    height: 7vh;
+    line-height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: left;
+}
+
+li.active {
+    text-decoration-line: line-through;
+}
+
+li>span.checked,
+li>span.delate {
+    display: block;
+    width: 7vh;
+    /* background-color: aquamarine; */
+    height: 100%;
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+li>span.checked i,
+li>span.delate i {
+    font-size: 4vh;
+    line-height: 6vh;
+    opacity: .3;
+    transition: .3s;
+}
+
+li>span.delate i {
+    opacity: .8;
+}
+
+li>span.delate:hover {
+    border: 2px solid red;
+    background-color: rgb(189, 186, 186);
+}
+
+li>span.delate:hover i {
+    color: red;
+    opacity: 1;
+}
+
+li>span.checked:hover {
+    border: 2px solid green;
+}
+
+li>span.checked.active {
+    border: 2px solid green;
+    color: green;
+
+}
+
+li>span.checked.active i {
+    opacity: 1;
+}
+
+li>span.checked:hover i {
+    color: green;
+    opacity: .7;
+}
+
+li>span.delate {
+
+    background-color: rgb(235, 130, 130);
+    /* margin: 2px; */
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 90%;
+    }
+
+    .addBox {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .addBox>input {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .addBox>button {
+        padding: 0 30px;
+    }
+
+    ul {
+        width: 100%;
+
+    }
+}
